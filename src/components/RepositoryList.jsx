@@ -1,4 +1,10 @@
-const repositoryName = "Name inside of a variable"
+import { RepositoryItem } from "./RepositoryItem"
+
+const repository = {
+  name: "Name props",
+  description: "description props",
+  link: "https://github.com",
+}
 
 export function RepositoryList() {
   return (
@@ -6,27 +12,10 @@ export function RepositoryList() {
       <h1>Repository List</h1>
 
       <ul>
-        <li>
-          <strong>{repositoryName}</strong>
-          <p>Description</p>
-          <a href="">
-            Access repository
-          </a>
-        </li>
-        <li>
-          <strong>Name</strong>
-          <p>Description</p>
-          <a href="">
-            Access repository
-          </a>
-        </li>
-        <li>
-          <strong>Name</strong>
-          <p>Description</p>
-          <a href="">
-            Access repository
-          </a>
-        </li>
+      <RepositoryItem repository={repository}/>
+      <RepositoryItem repository={repository}/>
+      <RepositoryItem repository={repository}/>
+      <RepositoryItem repository={repository}/>
       </ul>
     </section>
   );
